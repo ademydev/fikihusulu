@@ -33,12 +33,19 @@ const resourceContainer = document.getElementById('reference-grid');
 if (resourceContainer) {
   resourceContainer.innerHTML = siteConfig.resources
     .map(
-      (item) => `
+      (item) => {
+        const resourceAction = item.url === '#'
+          ? '<span class="resource-link is-disabled" aria-disabled="true">Kaynağı aç →</span>'
+          : `<a class="resource-link" href="${item.url}" target="_blank" rel="noopener noreferrer">Kaynağı aç →</a>`;
+
+        return `
         <article class="reference-card">
-          <h3><a href="${item.url}" target="_blank" rel="noopener noreferrer">${item.title}</a></h3>
+          <h3>${item.title}</h3>
           <p>${item.description}</p>
+          ${resourceAction}
         </article>
-      `
+        `;
+      }
     )
     .join('');
 }
