@@ -465,13 +465,13 @@ a:focus-visible, .toc-link:focus-visible { outline: 2px solid var(--accent); out
   transition: color 0.2s ease, opacity 0.2s ease;
 }
 
-.toc-link:nth-child(6) {
+.toc-link:nth-child(7) {
   margin-top: 15px;
   padding-top: 30px;
   border-top: 1px solid rgba(142, 174, 201, 0.2);
 }
 
-.toc-link:nth-child(6)::after {
+.toc-link:nth-child(7)::after {
   content: "SONUÇ";
   position: absolute;
   top: 10px;
@@ -482,8 +482,8 @@ a:focus-visible, .toc-link:focus-visible { outline: 2px solid var(--accent); out
   transition: color 0.18s ease, opacity 0.18s ease;
 }
 
-.toc-link:nth-child(6),
-.toc-link:nth-child(7) {
+.toc-link:nth-child(7),
+.toc-link:nth-child(8) {
   grid-template-columns: 1fr;
 }
 
@@ -506,12 +506,12 @@ a:focus-visible, .toc-link:focus-visible { outline: 2px solid var(--accent); out
   opacity: 1;
 }
 
-.toc-link.active:nth-child(6)::after {
+.toc-link.active:nth-child(7)::after {
   color: var(--accent-strong);
   opacity: 1;
 }
 
-.toc-link.active:not(:nth-child(6)):not(:nth-child(7))::after {
+.toc-link.active:not(:nth-child(7)):not(:nth-child(8))::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -533,7 +533,7 @@ a:focus-visible, .toc-link:focus-visible { outline: 2px solid var(--accent); out
     min-width: 255px;
     border: 1px solid var(--line);
   }
-  .toc-link:nth-child(6) { margin-top: 0; padding-top: 30px; }
+  .toc-link:nth-child(7) { margin-top: 0; padding-top: 30px; }
   .toc-link:hover { transform: translateY(-2px); }
 }
 
@@ -762,6 +762,46 @@ a:focus-visible, .toc-link:focus-visible { outline: 2px solid var(--accent); out
   margin-top: 1.25em;
 }
 
+.works-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: none;
+  margin-top: 28px;
+}
+
+.works-grid .source-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.works-grid .source-item h3 {
+  margin-bottom: 10px;
+}
+
+.work-author {
+  margin-bottom: 14px;
+  color: var(--accent-strong) !important;
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.work-author strong,
+.work-importance strong {
+  color: var(--accent);
+  font: 700 0.65rem/1.2 "Avenir Next", "Segoe UI", sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.works-grid .source-item p:not(.work-author) {
+  line-height: 1.78;
+}
+
+.works-grid .work-importance {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid rgba(142, 174, 201, 0.16);
+}
+
 @media (max-width: 760px) {
   .article-section { padding: 32px 20px 36px; }
   .article-section::before { top: 32px; left: 20px; }
@@ -774,4 +814,5 @@ a:focus-visible, .toc-link:focus-visible { outline: 2px solid var(--accent); out
   .flow-step strong { max-width: 24ch; }
   .source-item { padding: 22px 20px 20px; }
   .process-explanations { margin-top: 20px; padding-top: 18px; }
+  .works-grid { grid-template-columns: 1fr; }
 }
