@@ -743,6 +743,25 @@ a:focus-visible, .toc-link:focus-visible { outline: 2px solid var(--accent); out
 
 .timeline-box h3 { margin-bottom: 1em; }
 
+.process-explanations {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(142, 174, 201, 0.16);
+}
+
+.process-explanations p {
+  margin: 0 0 14px;
+  color: var(--muted);
+  line-height: 1.78;
+}
+
+.process-explanations p:last-child { margin-bottom: 0; }
+.process-explanations strong { color: var(--accent-strong); }
+
+.conclusion-block p + p {
+  margin-top: 1.25em;
+}
+
 @media (max-width: 760px) {
   .article-section { padding: 32px 20px 36px; }
   .article-section::before { top: 32px; left: 20px; }
@@ -754,4 +773,5 @@ a:focus-visible, .toc-link:focus-visible { outline: 2px solid var(--accent); out
   .flow-step { min-height: 112px; }
   .flow-step strong { max-width: 24ch; }
   .source-item { padding: 22px 20px 20px; }
+  .process-explanations { margin-top: 20px; padding-top: 18px; }
 }
