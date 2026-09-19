@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Fıkıh Usulü</title>
+  <desc id="desc">Fıkıh Usulü için akademik F monogramı</desc>
+  <rect width="64" height="64" rx="12" fill="#0B0F14"/>
+  <rect x="7" y="7" width="50" height="50" rx="8" fill="none" stroke="#8FAFC9" stroke-width="2"/>
+  <path d="M22 45V19h22M22 31h17" fill="none" stroke="#F1F5F9" stroke-width="6" stroke-linecap="square" stroke-linejoin="miter"/>
+  <circle cx="47" cy="45" r="3" fill="#8FAFC9"/>
+</svg>
